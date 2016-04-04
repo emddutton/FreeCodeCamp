@@ -43,16 +43,18 @@ for (var key in prettyPics) {
       console.log(key);
       console.log(obj.background);
       console.log(obj.icon);
-      $("body").css({'background': 'url(' + obj.background + ') no-repeat'}); 
-      $(".detail").html('"<img src=" + obj.icon');
+      $("body").css({'background-image': 'url(' + obj.background + ')',
+     "background-size": "cover"}); 
+      $(".detail").append('<img src=' + obj.icon + '>');
     }
+  
 }
     
 $("body").attr("id", detail);
     
 $(".city").text(city);
  
-$(".detail").html(detail);
+// $(".detail").html(detail);
     $(".temp").addClass("imperial").html(imperialTemp + "&deg; F");
 $("button").append(" Celsius");
     
