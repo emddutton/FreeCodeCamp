@@ -19,7 +19,7 @@ function success(pos){
         icon: "http://res.cloudinary.com/dgtkvm9hr/image/upload/v1459657480/Cloud_rafiyw.png"
       },
       clear: {
-        background: "http://res.cloudinary.com/dgtkvm9hr/image/upload/v1459632674/clear_zbptzw.jpg",
+        background: 'http://res.cloudinary.com/dgtkvm9hr/image/upload/v1459632674/clear_zbptzw.jpg',
         icon: "http://res.cloudinary.com/dgtkvm9hr/image/upload/v1459657480/Sun_ohyynn.png"
       },
       rain: {
@@ -36,21 +36,19 @@ function success(pos){
       }
     };
     
-   for (var key in prettyPics) {
+for (var key in prettyPics) {
     if (!prettyPics.hasOwnProperty(key)) continue;
-    var obj = prettyPics[key];
-    for (var prop in obj) {
-  if(!obj.hasOwnProperty(prop)) continue;
+    var obj = prettyPics[key];  
+    if(key == detail) {
+      console.log(key);
       console.log(obj.background);
+      console.log(obj.icon);
+      $("body").css({'background': 'url(' + obj.background + ') no-repeat'}); 
+      $(".detail").html('"<img src=" + obj.icon');
     }
 }
     
-    $("body").attr("id", detail);
-    
-//     if(detail == "clouds") {
-      
-//       $("body").css("background", "url('http://res.cloudinary.com/dgtkvm9hr/image/upload/v1459632686/cloudy_wc1mgq.jpg') center no-repeat");
-//     }
+$("body").attr("id", detail);
     
 $(".city").text(city);
  
