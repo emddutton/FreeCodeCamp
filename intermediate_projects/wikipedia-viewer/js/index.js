@@ -17,7 +17,7 @@ $(".searchField").on('keyup click', function (e) {
     var snippet = x.query.search[i].snippet;
     console.log(snippet);
     var baseurl = "http://en.wikipedia.org/wiki/"; 
-   $(".results").append('<p>' + title + '</p>' + '<p>' + snippet + '</p>');   
+   $(".results").append('<a href=' + '"' + baseurl + title + '"' + ' TARGET="_blank">' + '<p>' + title + '</p>' + '<p>' + snippet + "..." + '</p>' + '</a>');   
     } 
   }
 });
