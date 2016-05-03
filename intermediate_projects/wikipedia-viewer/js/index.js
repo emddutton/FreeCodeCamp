@@ -1,8 +1,8 @@
 var toSearch;
-$(".searchField").on('keyup click', function (e) {
-    if (e.keyCode == 13) {
-        toSearch = $("#search").val();
-    }
+$("#searcharea").submit(function (e) {
+      e.preventDefault();
+      $(".results").empty();
+      toSearch = $("#search").val();
 
   $.ajax({
   url: '//en.wikipedia.org/w/api.php?format=json&action=query',

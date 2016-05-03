@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway|Open+Sans);
+body {
+  background-color: #008c8c;
+  font-family: 'Open Sans';
+  margin: 0 auto;
+  width: 80%;
+}
+
+h1 {
+  font-family: 'Raleway';
+  text-align: center;
+  font-size: 3em;
+  margin-top: 50px;
+}
+
+#searcharea {
+  text-align: center;
+  font-size: 1em;
+}
+#searcharea input, #searcharea button {
+  font-size: 1.25em;
+}
+
+.results {
+  margin-top: 30px;
+}
+.results a {
+  color: white;
+  text-decoration: none;
+}
+.results a p:first-of-type {
+  font-size: 1.5em;
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.results a p:nth-of-type(2) {
+  margin-top: 10px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid grey;
+}
